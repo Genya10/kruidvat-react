@@ -3,8 +3,11 @@
     position: absolute;
     top: 12.5rem;
     right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
+    
     margin-top: 3.5rem;
+}
+.items{
+        display: flex;
+       flex-wrap: wrap;
+       gap: 4rem;
 }

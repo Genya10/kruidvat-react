@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Sidebar/>
       <Main/>
-      <Footer/>
+     {/*} <Footer/>*/}
     </div>
   );
 }

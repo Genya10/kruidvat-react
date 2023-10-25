@@ -1,6 +1,8 @@
 import React from "react";
 import cl from "../styles/Item.module.css";
 
+
+
 export const Item=({item}:any)=>{
     return(
         <div className={cl.item}>
