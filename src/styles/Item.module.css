@@ -1,25 +1,35 @@
 .item{
     position: relative;
     padding: 0.3rem;
+    background-color: gainsboro;
+    overflow: hidden;
+    border-radius: 0.625rem;
 }
 .item img{
     width: 15rem;
     border: 0.5rem double red;
 }
 .item img:hover{
-    transform: scale(1.2);
+    transform: scale(1.2,1.2);
     transition-duration: 0.8s;
 }
 .item h3{
     color: #000000;
     font-weight: 700;
     font-size: 1.6rem;
-    line-height: 1.3;
-    text-decoration: underline 2px;
+    line-height: 1.2;
+    text-decoration: underline 0.125rem;
     cursor: pointer;
+    margin-top:0;
+    margin-bottom: 0.25rem;
 }
 .item h3:hover{
     color: blue;
+}
+.item b{
+    font-size: 1.25rem;
+    color:purple;
+    padding: 0.25rem;
 }
 .addToCart {
     position: absolute;
@@ -34,7 +44,7 @@
     text-align: center;
     cursor: pointer;
     font-size: 1.2rem;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     transition: transform 500ms ease;
     
   }
