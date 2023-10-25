@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import { Item } from "./Item";
 import { Categories } from "./Categories";
 
-type PropsItem={
+export type TypeItem={
     id: number,
     title: string,
     img: string,
@@ -14,7 +14,7 @@ type PropsItem={
 
 export const Main=()=>{
 
-    const [items,setItems]=useState<PropsItem[]>([
+    const [items,setItems]=useState<TypeItem[]>([
         {
             id:1,
             title:"Эхинацея",
@@ -128,7 +128,7 @@ export const Main=()=>{
             price:"320"
         },
     ]);
-    const [currentItems,setCurrentItems]=useState<PropsItem[]>([]);
+    const [currentItems,setCurrentItems]=useState<TypeItem[]>([]);
     useEffect(()=>{
         setCurrentItems(items);
     },[]);

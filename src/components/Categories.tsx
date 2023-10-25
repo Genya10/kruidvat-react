@@ -1,7 +1,11 @@
 import React, {useState} from "react";
 import cl from "../styles/Categories.module.css";
 
-export const Categories=({chooseCategory})=>{
+type PropsTypeCategories={
+    chooseCategory:(category:string)=>void,
+}
+
+export const Categories=(props:PropsTypeCategories)=>{
 
     const [categories,setCategories]=useState([
         {
@@ -28,8 +32,8 @@ export const Categories=({chooseCategory})=>{
     return(
         <div className={cl.categories}>
           {categories.map((elem)=>
-          <div key={elem.id}
-            onClick={()=>{chooseCategory(elem.key)}}>
+          <div key={elem.key}
+            onClick={()=>{props.chooseCategory(elem.key)}}>
             {elem.category}</div>)}
         </div>
     )

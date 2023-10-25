@@ -9,11 +9,11 @@ export const Header=()=>{
         <h1 className={cl.textHeader}>
           Витамины для всей семьи по доступным ценам!
         </h1>
-        <div className={cl.bassket}>         
+        <div className={cl.cart}>         
           <FaShoppingCart className={cl.shoppingCart}/>
-          <a href="./basket.html">
-            <p className={cl.order}>Мой заказ</p>
-          </a>
+
+            <div className={cl.order}>Мой заказ</div>
+
         </div>
       </div>
     );
