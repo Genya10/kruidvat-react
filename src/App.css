@@ -5,8 +5,9 @@ body{
   width: 100%;
 }
 .App {
-  width: 85rem;
+  width: 88rem;
   margin: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
