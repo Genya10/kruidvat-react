@@ -3,6 +3,7 @@ import cl from "../styles/Main.module.css";
 import { useState,useEffect } from "react";
 import { Item } from "./Item";
 import { Categories } from "./Categories";
+import { useOrders,OrdersContextType } from "./OrderProvider";
 
 export type TypeItem={
     id: number,
@@ -128,6 +129,8 @@ export const Main=()=>{
             price:"320"
         },
     ]);
+    const orderContext = useOrders() as OrdersContextType;
+    const {orders,setOrders}=orderContext;
     const [currentItems,setCurrentItems]=useState<TypeItem[]>([]);
     useEffect(()=>{
         setCurrentItems(items);
@@ -139,6 +142,15 @@ export const Main=()=>{
         }
         setCurrentItems(items.filter(elem => elem.category === category));
     }
+    const addToOrder=(item:TypeItem)=>{
+     let isInArray = false;
+     orders.forEach((elem)=>{
+        if(elem.id === item.id){
+            isInArray = true;
+        }
+     });
+     if(!isInArray) setOrders([...orders,item]);
+    }
 
     return(
         <div className={cl.main}>
@@ -148,7 +160,8 @@ export const Main=()=>{
             return(
                 <Item 
                    key={item.id}
-                   item={item}/>
+                   item={item}
+                   addToOrder={addToOrder}/>
             )
           })}
           </main>

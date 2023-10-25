@@ -42,18 +42,31 @@
     margin-right: 5.5rem;
   }
 
-  .shoppingCart{
+  .shopButton{
     font-size: 3rem;
     cursor: pointer;
-    transition: color,transform 500ms ease;
+    
     position: absolute;
     top: 2.5rem;
     right: 8rem;
   }
-  .shoppingCart:hover,
-  .shoppingCart.active{
+  .shopButton :hover,
+  .shoppButton.active{
     color: #dc3d3d;
-    transform: scale(1.5);
+    transform: scale(1.3);
+    transition:  500ms ease;
+  }
+  .shopCart{
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    width: 28rem;
+    text-transform: capitalize;
+    background-color: rgba(0, 255, 255, 0.844);
+    padding: 0.625rem;
+    z-index: 10;
+    border-radius:1rem;
+    padding-bottom: 0px;
   }
   
   .order {
@@ -64,4 +77,10 @@
     text-align: start;
     margin-top: 6rem;
     margin-left: 1rem;
+  }
+  .total{
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding-left:1rem;
+    padding-bottom: 0.625rem;
   }
