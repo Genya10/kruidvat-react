@@ -45,3 +45,46 @@
     border-radius: 2rem;
     padding: 1rem 0;
   }
+  .imgPhoto{
+    width: 18rem;
+    border: 1rem double red;
+    transition-duration: 1s; 
+    margin-bottom: 2rem;
+  }
+  .imgPhoto:hover{
+    transform: scale(-1, 1);
+    transition-duration: 1.5s;
+  }
+
+.popup {
+  width: 19rem;
+  border-radius: 0.8rem;
+  background-color: rgba(0, 128, 0, 0.46);
+  padding: 0.6rem;
+}
+
+/*.popup:target {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 1.2s;
+  transform: translate(0rem, 4.2rem);
+}*/
+
+.popupClose {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.popupCloseX {
+  margin-left: 9.5rem;
+  cursor: pointer;
+  border: 0.0625rem solid black;
+  border-radius: 50%;
+  padding: 0.04rem 0.3rem;
+}
+
+.popupText {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
