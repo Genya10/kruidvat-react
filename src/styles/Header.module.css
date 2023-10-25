@@ -43,9 +43,8 @@
   }
 
   .shopButton{
-    font-size: 3rem;
-    cursor: pointer;
-    
+    font-size: 2rem;
+    cursor: pointer;  
     position: absolute;
     top: 2.5rem;
     right: 8rem;
@@ -53,7 +52,7 @@
   .shopButton :hover,
   .shoppButton.active{
     color: #dc3d3d;
-    transform: scale(1.3);
+  
     transition:  500ms ease;
   }
   .shopCart{

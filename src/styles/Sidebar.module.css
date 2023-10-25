@@ -1,8 +1,47 @@
 .sidebar{
     width: 25%;
-    
-    background-color: yellow;
+    background-color: azure;
     position: absolute;
     top: 12.5rem;
     left: 0;
 }
+.contacts {
+    margin-right: 5rem;
+    padding: 1.85rem;
+  }
+.linkInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+.social {
+    
+    padding-right: 0.4rem;
+  }
+.infoLi {
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  
+  .infoLi:hover,
+  .infoLi:focus {
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: 500ms ease;
+  }
+
+.hit {
+    font-weight: 700;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 4.4rem;
+    background-color: orangered;
+    color: blue;
+    width: 16rem;
+    margin-left:2.5rem;
+    margin-bottom: 3.6rem;
+    border-radius: 2rem;
+    padding: 1rem 0;
+  }
