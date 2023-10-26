@@ -166,8 +166,7 @@ export const Main=()=>{
                 <Item 
                    key={item.id}
                    item={item}
-                   addToOrder={addToOrder}/>
-                  
+                   addToOrder={addToOrder}/>     
             )
           })}
           </main>
