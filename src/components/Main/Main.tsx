@@ -3,7 +3,7 @@ import cl from "../styles/Main.module.css";
 import { useState,useEffect } from "react";
 import { Item } from "./Item";
 import { Categories } from "./Categories";
-import { useOrders,OrdersContextType } from "./OrderProvider";
+import { useOrders,OrdersContextType } from "../Context/OrderProvider";
 
 export type TypeItem={
     id: number,
