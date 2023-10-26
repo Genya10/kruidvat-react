@@ -1,5 +1,5 @@
 import React from "react";
-import cl from "../styles/Main.module.css";
+import cl from "../../styles/Main.module.css";
 import { useState,useEffect } from "react";
 import { Item } from "./Item";
 import { Categories } from "./Categories";

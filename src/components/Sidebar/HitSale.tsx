@@ -1,4 +1,4 @@
-import cl from "../styles/Sidebar.module.css";
+import cl from "../../styles/Sidebar.module.css";
 
 type PropsTypeHitSale={
     showPopup:()=>void

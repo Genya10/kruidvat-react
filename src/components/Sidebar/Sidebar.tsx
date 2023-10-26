@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import cl from "../styles/Sidebar.module.css";
+import cl from "../../styles/Sidebar.module.css";
 import { ModalSidebar } from "./ModalSidebar";
 import { ContactsSidebar } from "./ContactsSidebar";
 import { HitSale } from "./HitSale";

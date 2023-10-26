@@ -1,5 +1,5 @@
 import { type } from "os";
-import cl from "../styles/Sidebar.module.css";
+import cl from "../../styles/Sidebar.module.css";
 
 type PropsTypeModalSidebar={
     showPopup:()=>void

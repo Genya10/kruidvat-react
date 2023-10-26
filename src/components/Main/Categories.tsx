@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import cl from "../styles/Categories.module.css";
+import cl from "../../styles/Categories.module.css";
 
 type PropsTypeCategories={
     chooseCategory:(category:string)=>void,

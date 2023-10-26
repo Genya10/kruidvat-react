@@ -1,4 +1,4 @@
-import cl from "../styles/Item.module.css";
+import cl from "../../styles/Item.module.css";
 import { TypeItem } from "./Main";
 
 type PropsTypeItem={

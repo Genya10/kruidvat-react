@@ -1,4 +1,4 @@
-import cl from "../styles/Sidebar.module.css";
+import cl from "../../styles/Sidebar.module.css";
 
 export const ContactsSidebar=()=>{
     return(

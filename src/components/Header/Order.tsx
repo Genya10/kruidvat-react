@@ -1,5 +1,5 @@
 import React from "react";
-import cl from "../styles/Order.module.css";
+import cl from "../../styles/Order.module.css";
 import {FaTrash} from 'react-icons/fa';
 
 type ItemOrder={
