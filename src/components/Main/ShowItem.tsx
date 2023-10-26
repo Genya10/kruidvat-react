@@ -3,7 +3,7 @@ export const ShowItem=()=>{
     return(
         <div>
             <img src="" alt="" />
-            <div className="description"></div>
+            <div className="description">QWEEWRWETY</div>
         </div>
     )
 }

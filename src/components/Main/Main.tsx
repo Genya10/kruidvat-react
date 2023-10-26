@@ -4,6 +4,8 @@ import { useState,useEffect } from "react";
 import { Item } from "./Item";
 import { Categories } from "./Categories";
 import { useOrders,OrdersContextType } from "../Context/OrderProvider";
+import { ShowItem } from "./ShowItem";
+import { NavLink } from "react-router-dom";
 
 export type TypeItem={
     id: number,
@@ -132,6 +134,8 @@ export const Main=()=>{
     const orderContext = useOrders() as OrdersContextType;
     const {orders,setOrders}=orderContext;
     const [currentItems,setCurrentItems]=useState<TypeItem[]>([]);
+    let [showItem,setShowItem]=useState(true);
+    const [fullItem,setFullItem]=useState({});
     useEffect(()=>{
         setCurrentItems(items);
     },[]);
@@ -158,13 +162,26 @@ export const Main=()=>{
             <main className={cl.items}>
           {currentItems.map((item)=>{
             return(
+                
                 <Item 
                    key={item.id}
                    item={item}
                    addToOrder={addToOrder}/>
+                  
             )
           })}
           </main>
+          <NavLink to={"/vitamin1"}>Vitamin1</NavLink>
+          <NavLink to={"/vitamin2"}>Vitamin2</NavLink>
+          <NavLink to={"/vitamin3"}>Vitamin3</NavLink>
+          <NavLink to={"/vitamin4"}>Vitamin4</NavLink>
+          <NavLink to={"/vitamin5"}>Vitamin5</NavLink>
+          <NavLink to={"/vitamin6"}>Vitamin6</NavLink>
+          {showItem && (
+           <ShowItem />
+          )
+
+          }
         </div>
     )
 }
