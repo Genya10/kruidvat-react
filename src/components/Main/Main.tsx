@@ -5,9 +5,8 @@ import { Item } from "./Item";
 import { Categories } from "./Categories";
 import { useOrders,OrdersContextType } from "../Context/OrderProvider";
 import { ShowItem } from "./ShowItem";
-import { NavLink } from "react-router-dom";
 
-export type TypeItem={
+export type TypeItem = {
     id: number,
     title: string,
     img: string,
@@ -164,7 +163,9 @@ export const Main=()=>{
         setFullItem(item);        
         setShowItem(false);
     }
-
+    const setShowItemTrue=()=>{
+        setShowItem(true);
+    }
     useEffect(()=>{
         setCurrentItems(items);
         
@@ -209,7 +210,9 @@ export const Main=()=>{
                 <div className={cl.fullItem}>
                   <div>  <h1>{fullItem.title}</h1>
                     <img src={"img-vitamins/" + fullItem.img}/>
-                    <b>{fullItem.price}грн</b></div>
+                    <b>{fullItem.price}грн</b>
+                    <button onClick={setShowItemTrue}>Вернуться на главную</button>
+                    </div>
                    <div> <p>{fullItem.description}</p>
                    </div>
                     </div>                   
