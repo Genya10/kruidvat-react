@@ -10,23 +10,23 @@ export const Categories=(props:PropsTypeCategories)=>{
     const [categories,setCategories]=useState([
         {
             key:"all",
-            category:"All"
+            category:"Все"
         },
         {
             key:"complex",
-            category:"Complex"
+            category:"Комплексные"
         },
         {
             key:"supplements",
-            category:"Supplements"
+            category:"Добавки"
         },
         {
             key:"age",
-            category:"Age"
+            category:"Возрастные"
         },
         {
             key:"singular",
-            category:"Singular"
+            category:"Одиночные"
         }
     ])
     return(

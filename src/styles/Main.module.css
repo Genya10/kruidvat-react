@@ -11,3 +11,10 @@
        flex-wrap: wrap;
        gap: 4rem;
 }
+.fullItem{
+    display: flex;
+    flex-direction: column;
+}
+.fullItem img {
+    width: 30%;
+}

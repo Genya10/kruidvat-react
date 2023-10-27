@@ -1,9 +1,14 @@
+import { TypeItem } from "./Main";
 
-export const ShowItem=()=>{
+type PropsTypeShowItem={
+    elem:TypeItem,
+}
+export const ShowItem=(props:PropsTypeShowItem)=>{
     return(
         <div>
-            <img src="" alt="" />
-            <div className="description">QWEEWRWETY</div>
+            <h1>{props.elem.id}</h1>
+            <img src={"./img-vitamins"+props.elem.img} alt="" />
+            <div className="description">{props.elem.category}</div>
         </div>
     )
 }

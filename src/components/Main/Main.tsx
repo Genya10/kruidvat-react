@@ -23,7 +23,7 @@ export const Main=()=>{
             title:"Эхинацея",
             img:"/echinacea.jpg",
             category:"supplements",
-            price:"400"
+            price:"400",
         },
         {
             id:2,
@@ -135,9 +135,16 @@ export const Main=()=>{
     const {orders,setOrders}=orderContext;
     const [currentItems,setCurrentItems]=useState<TypeItem[]>([]);
     let [showItem,setShowItem]=useState(true);
-    const [fullItem,setFullItem]=useState({});
+    let [fullItem,setFullItem]=useState<TypeItem | null>(null);
+   
+    const changeShowItem=(item:TypeItem)=>{
+        setFullItem(item);        
+        setShowItem(false);
+    }
+
     useEffect(()=>{
         setCurrentItems(items);
+        
     },[]);
     const chooseCategory=(category:string)=>{
         if(category === "all"){
@@ -156,31 +163,44 @@ export const Main=()=>{
      if(!isInArray) setOrders([...orders,item]);
     }
 
-    return(
+    return(       
         <div className={cl.main}>
+              {showItem 
+       ? <div>
             <Categories chooseCategory={chooseCategory}/>
             <main className={cl.items}>
           {currentItems.map((item)=>{
-            return(
-                
+            return(               
                 <Item 
                    key={item.id}
                    item={item}
-                   addToOrder={addToOrder}/>     
+                   addToOrder={addToOrder}
+                   changeShowItem={changeShowItem}/>     
             )
           })}
           </main>
+          </div>
+          :<div>
+              {fullItem !== null
+              ?(
+                <div className={cl.fullItem}>
+                    <h2>{fullItem.title}</h2>
+                    <img src={"img-vitamins/" + fullItem.img}/>
+                    <b>{fullItem.price}</b></div>
+              )
+            : null
+            } 
+          </div>                
+          }
+
           <NavLink to={"/vitamin1"}>Vitamin1</NavLink>
           <NavLink to={"/vitamin2"}>Vitamin2</NavLink>
           <NavLink to={"/vitamin3"}>Vitamin3</NavLink>
           <NavLink to={"/vitamin4"}>Vitamin4</NavLink>
           <NavLink to={"/vitamin5"}>Vitamin5</NavLink>
           <NavLink to={"/vitamin6"}>Vitamin6</NavLink>
-          {showItem && (
-           <ShowItem />
-          )
-
-          }
         </div>
+        
     )
 }
+//{fullItem instanceof Object && 'title' in fullItem && fullItem.title} 
