@@ -4,7 +4,6 @@ import { Sidebar } from './components/Sidebar/Sidebar';
 import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
 import { OrderProvider } from './components/Context/OrderProvider';
-
 import {BrowserRouter , Route } from "react-router-dom";
 import { RoutesComponent } from './components/Routes/RoutesComponent';
 
@@ -15,7 +14,8 @@ function App() {
         <div className="App">
           <Header />
           <Sidebar />
-          <RoutesComponent />
+          <Main/>
+          <Footer/>
         </div>
       </OrderProvider>
     </BrowserRouter>

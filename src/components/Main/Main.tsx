@@ -13,6 +13,7 @@ export type TypeItem={
     img: string,
     category: string,
     price: string,
+    description:string
 }
 
 export const Main=()=>{
@@ -24,111 +25,133 @@ export const Main=()=>{
             img:"/echinacea.jpg",
             category:"supplements",
             price:"400",
+            description:`📌Эхинацея рекомендуется при лечении и профилактике ОРВИ, гриппа, вирусных инфекций, 
+             расстройствах мочеполовой и репродуктивной функций, кожных заболеваниях.
+             📌Благодаря высокой концентрации эфирных масел, кислот и антиоксидантов,
+              растение помогает быстрее справиться с вирусами и сократить восстановительный период. 
+              Состав: 
+              💊 эхинацея: 120 табл`             
         },
         {
             id:2,
             title:"Витамин Б12",
             img:"/b12.jpg",
             category:"singular",
-            price:"250"
+            price:"250",
+            description:``
+
         },
         {
             id:3,
             title:"Витамин C 500мг",
             img:"/c500.jpg",
             category:"singular",
-            price:"320"
+            price:"320",
+            description:``
         },
         {
             id:4,
-            title:"",
+            title:"Кальций+магний",
             img:"/cal_m_z.jpg",
             category:"complex",
-            price:"210"
+            price:"210",
+            description:``
         },
         {
             id:5,
-            title:"",
+            title:"Витамин Д+Магний",
             img:"/d_magn.jpg",
             category:"",
-            price:"185"
+            price:"185",
+            description:``
         },
         {
             id:6,
-            title:"",
+            title:"Витамин Д 50мг",
             img:"/d50.jpg",
             category:"singular",
-            price:""
+            price:"250",
+            description:""
         },
         {
             id:7,
             title:"Возраст +50",
             img:"/az50.jpg",
             category:"age",
-            price:"320"
+            price:"320",
+            description:""
         },
         {
             id:8,
-            title:"Витамин C 500мг",
+            title:"Витамины детские",
             img:"/kids_az.jpg",
             category:"age",
-            price:"320"
+            price:"420",
+            description:""
         },
         {
             id:9,
-            title:"Витамин C 500мг",
+            title:"Чеснок",
             img:"/knoflook.jpg",
             category:"supplements",
-            price:"320"
+            price:"250",
+            description:""
         },
         {
             id:10,
-            title:"Витамин C 500мг",
+            title:"Мелатонон",
             img:"/melatonin.jpg",
             category:"supplements",
-            price:"320"
+            price:"370",
+            description:""
         },
         {
             id:11,
-            title:"Витамин C 500мг",
+            title:"Семейные",
             img:"/multi_az.jpg",
             category:"complex",
-            price:"320"
+            price:"520",
+            description:""
         },
         {
             id:12,
-            title:"Витамин C 500мг",
+            title:"Омега 3",
             img:"/omega3_60t.jpg",
             category:"supplements",
-            price:"320"
+            price:"550",
+            description:""
         },
         {
             id:13,
-            title:"Витамин C 500мг",
+            title:"Кофермент 10",
             img:"/q10.jpg",
-            category:"",
-            price:"320"
+            category:"supplements",
+            price:"460",
+            description:""
         },
         {
             id:14,
-            title:"Витамин C 500мг",
+            title:"Антистрессовые",
             img:"/stress_moment.jpg",
             category:"supplements",
-            price:"320"
+            price:"390",
+            description:""
         },
         {
             id:15,
-            title:"Витамин C 500мг",
+            title:"Витамин С 1000мг",
             img:"/vit1000.jpg",
             category:"singular",
-            price:"320"
+            price:"600",
+            description:""
         },
         {
             id:16,
-            title:"Витамин C 500мг",
+            title:"Цинк",
             img:"/zink.jpg",
             category:"singular",
-            price:"320"
+            price:"300",
+            description:""
         },
     ]);
     const orderContext = useOrders() as OrdersContextType;
@@ -184,23 +207,21 @@ export const Main=()=>{
               {fullItem !== null
               ?(
                 <div className={cl.fullItem}>
-                    <h2>{fullItem.title}</h2>
+                  <div>  <h1>{fullItem.title}</h1>
                     <img src={"img-vitamins/" + fullItem.img}/>
-                    <b>{fullItem.price}</b></div>
+                    <b>{fullItem.price}грн</b></div>
+                   <div> <p>{fullItem.description}</p>
+                   </div>
+                    </div>                   
               )
             : null
             } 
           </div>                
           }
 
-          <NavLink to={"/vitamin1"}>Vitamin1</NavLink>
-          <NavLink to={"/vitamin2"}>Vitamin2</NavLink>
-          <NavLink to={"/vitamin3"}>Vitamin3</NavLink>
-          <NavLink to={"/vitamin4"}>Vitamin4</NavLink>
-          <NavLink to={"/vitamin5"}>Vitamin5</NavLink>
-          <NavLink to={"/vitamin6"}>Vitamin6</NavLink>
+
         </div>
         
     )
 }
-//{fullItem instanceof Object && 'title' in fullItem && fullItem.title} 
+ 
