@@ -19,3 +19,6 @@
     transform: scale(1.3);
     transition: 500ms ease;
 }
+b{
+    text-transform: lowercase;
+}

@@ -21,7 +21,7 @@ export const Order = (props:PropsOrder)=>{
             </div>
             <div>
                 <h2>{props.item.title}</h2>
-                <b>{props.item.price}</b>
+                <b>{props.item.price}грн</b>
             </div>
          <FaTrash className={cl.deleteIcon}
                   onClick={()=>{props.deleteOrder(props.item.id)}}/>

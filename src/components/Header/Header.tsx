@@ -3,6 +3,7 @@ import cl from "../../styles/Header.module.css";
 import {FaShoppingCart} from 'react-icons/fa';
 import { useOrders,OrdersContextType } from "../Context/OrderProvider";
 import { Order } from "./Order";
+import { AuthFormModal } from "./AuthFormModal";
 
 export const Header=()=>{
 
@@ -10,6 +11,7 @@ let [cartOpen, setCartOpen] = useState(false);
 const orderContext = useOrders() as OrdersContextType;
 const { orders, setOrders } = orderContext;
 const [total,setTotal] = useState(0);
+const [modal,setModal] = useState(false);
 
 useEffect(()=>{
   let newTotal = 0;
@@ -25,7 +27,9 @@ const showNothing=()=>{
 const deleteOrder=(id:number)=>{
   setOrders(orders.filter(elem => elem.id !== id))
 }
-
+const setModalTrue=()=>{
+  setModal(true);
+}
 
     return (
       <div className={cl.header}>
@@ -33,12 +37,15 @@ const deleteOrder=(id:number)=>{
         <h1 className={cl.textHeader}>
           Витамины для всей семьи по доступным ценам!
         </h1>
-        <div className={cl.cart}>         
+        <div onClick={setModalTrue} className={cl.cabinet}>Личный кабинет</div>
+        <div className={cl.cart}>                 
           <FaShoppingCart 
            onClick={()=> setCartOpen(cartOpen = !cartOpen)}
            className={`${cl.shopButton} ${cartOpen && cl.active}`}
            />
-            <div className={cl.order}>Мой заказ</div>
+           {modal && 
+           <AuthFormModal />}
+            
           {cartOpen && (
             <div className={cl.shopCart}>
               {orders.length > 0
