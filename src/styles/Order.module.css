@@ -20,5 +20,7 @@
     transition: 500ms ease;
 }
 b{
+    font-size: 1.2rem;
+    color: purple;
     text-transform: lowercase;
 }

@@ -83,3 +83,15 @@
     padding-left:1rem;
     padding-bottom: 0.625rem;
   }
+  .makeOrder{
+    font-size: 1.2rem;
+    margin-left: 10rem;
+    cursor: pointer; 
+    border: 0.0625rem solid black; 
+    border-radius: 0.7rem; 
+    padding: 0.2rem 0.5rem; 
+    transition: 0.7s;
+  }
+  .makeOrder:hover{
+    transform: scale(1.2,1.2);   
+  }

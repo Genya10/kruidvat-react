@@ -53,7 +53,9 @@ const setModalTrue=()=>{
                 <div>
                   {orders.map((elem)=>
                   <Order key={elem.id} item={elem} deleteOrder={deleteOrder}/> )}
-                  <div className={cl.total}>Total:{total}грн</div>
+                  <div className={cl.total}>Сумма:{total}грн
+                  <button className={cl.makeOrder}>Заказать</button>
+                  </div>
                 </div>
               )
               : showNothing()}              
