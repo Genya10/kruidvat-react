@@ -1,8 +1,9 @@
 .order{
     display: flex;
-    gap: 5px;
-    margin-bottom: 10px;   
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;   
     position: relative;
+    border: 0.1rem dotted black;
 }
 .order img{
     width: 5rem;
