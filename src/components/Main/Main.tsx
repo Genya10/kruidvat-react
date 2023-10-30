@@ -5,6 +5,10 @@ import { Item } from "./Item";
 import { Categories } from "./Categories";
 import { useOrders,OrdersContextType } from "../Context/OrderProvider";
 import { ShowItem } from "./ShowItem";
+import { useDispatch } from "react-redux/es/exports";
+import { setItems } from "../../store/reducers/itemsReducer";
+import { useSelector, UseSelector } from "react-redux/es/hooks/useSelector";
+import { RootState } from "../../store/store";
 
 export type TypeItem = {
     id: number,
@@ -16,149 +20,154 @@ export type TypeItem = {
 }
 
 export const Main=()=>{
+    const dispatch = useDispatch();
+    const selector = useSelector( (state:RootState) => state.items );
+    console.log(selector);
 
-    const [items,setItems]=useState<TypeItem[]>([
-        {
-            id:1,
-            title:"Эхинацея",
-            img:"/echinacea.jpg",
-            category:"supplements",
-            price:"400",
-            description:`📌Эхинацея рекомендуется при лечении и профилактике ОРВИ, гриппа, вирусных инфекций, 
-             расстройствах мочеполовой и репродуктивной функций, кожных заболеваниях.
-             📌Благодаря высокой концентрации эфирных масел, кислот и антиоксидантов,
-              растение помогает быстрее справиться с вирусами и сократить восстановительный период. 
-              Состав: 
-              💊 эхинацея: 120 табл`             
-        },
-        {
-            id:2,
-            title:"Витамин Б12",
-            img:"/b12.jpg",
-            category:"singular",
-            price:"250",
-            description:``
-
-        },
-        {
-            id:3,
-            title:"Витамин C 500мг",
-            img:"/c500.jpg",
-            category:"singular",
-            price:"320",
-            description:``
-        },
-        {
-            id:4,
-            title:"Кальций+магний",
-            img:"/cal_m_z.jpg",
-            category:"complex",
-            price:"210",
-            description:``
-        },
-        {
-            id:5,
-            title:"Витамин Д+Магний",
-            img:"/d_magn.jpg",
-            category:"",
-            price:"185",
-            description:``
-        },
-        {
-            id:6,
-            title:"Витамин Д 50мг",
-            img:"/d50.jpg",
-            category:"singular",
-            price:"250",
-            description:""
-        },
-        {
-            id:7,
-            title:"Возраст +50",
-            img:"/az50.jpg",
-            category:"age",
-            price:"320",
-            description:""
-        },
-        {
-            id:8,
-            title:"Витамины детские",
-            img:"/kids_az.jpg",
-            category:"age",
-            price:"420",
-            description:""
-        },
-        {
-            id:9,
-            title:"Чеснок",
-            img:"/knoflook.jpg",
-            category:"supplements",
-            price:"250",
-            description:""
-        },
-        {
-            id:10,
-            title:"Мелатонон",
-            img:"/melatonin.jpg",
-            category:"supplements",
-            price:"370",
-            description:""
-        },
-        {
-            id:11,
-            title:"Семейные",
-            img:"/multi_az.jpg",
-            category:"complex",
-            price:"520",
-            description:""
-        },
-        {
-            id:12,
-            title:"Омега 3",
-            img:"/omega3_60t.jpg",
-            category:"supplements",
-            price:"550",
-            description:""
-        },
-        {
-            id:13,
-            title:"Кофермент 10",
-            img:"/q10.jpg",
-            category:"supplements",
-            price:"460",
-            description:""
-        },
-        {
-            id:14,
-            title:"Антистрессовые",
-            img:"/stress_moment.jpg",
-            category:"supplements",
-            price:"390",
-            description:""
-        },
-        {
-            id:15,
-            title:"Витамин С 1000мг",
-            img:"/vit1000.jpg",
-            category:"singular",
-            price:"600",
-            description:""
-        },
-        {
-            id:16,
-            title:"Цинк",
-            img:"/zink.jpg",
-            category:"singular",
-            price:"300",
-            description:""
-        },
-    ]);
     const orderContext = useOrders() as OrdersContextType;
     const {orders,setOrders}=orderContext;
-    const [currentItems,setCurrentItems]=useState<TypeItem[]>([]);
     let [showItem,setShowItem]=useState(true);
     let [fullItem,setFullItem]=useState<TypeItem | null>(null);
-   
+
+    useEffect(()=>{ 
+      dispatch(setItems([        
+            {
+                id:1,
+                title:"Эхинацея",
+                img:"/echinacea.jpg",
+                category:"supplements",
+                price:"400",
+                description:`📌Эхинацея рекомендуется при лечении и профилактике ОРВИ, гриппа, вирусных инфекций, 
+                 расстройствах мочеполовой и репродуктивной функций, кожных заболеваниях.
+                 📌Благодаря высокой концентрации эфирных масел, кислот и антиоксидантов,
+                  растение помогает быстрее справиться с вирусами и сократить восстановительный период. 
+                  Состав: 
+                  💊 эхинацея: 120 табл`             
+            },
+            {
+                id:2,
+                title:"Витамин Б12",
+                img:"/b12.jpg",
+                category:"singular",
+                price:"250",
+                description:``
+    
+            },
+            {
+                id:3,
+                title:"Витамин C 500мг",
+                img:"/c500.jpg",
+                category:"singular",
+                price:"320",
+                description:``
+            },
+            {
+                id:4,
+                title:"Кальций+магний",
+                img:"/cal_m_z.jpg",
+                category:"complex",
+                price:"210",
+                description:``
+            },
+            {
+                id:5,
+                title:"Витамин Д+Магний",
+                img:"/d_magn.jpg",
+                category:"",
+                price:"185",
+                description:``
+            },
+            {
+                id:6,
+                title:"Витамин Д 50мг",
+                img:"/d50.jpg",
+                category:"singular",
+                price:"250",
+                description:""
+            },
+            {
+                id:7,
+                title:"Возраст +50",
+                img:"/az50.jpg",
+                category:"age",
+                price:"320",
+                description:""
+            },
+            {
+                id:8,
+                title:"Витамины детские",
+                img:"/kids_az.jpg",
+                category:"age",
+                price:"420",
+                description:""
+            },
+            {
+                id:9,
+                title:"Чеснок",
+                img:"/knoflook.jpg",
+                category:"supplements",
+                price:"250",
+                description:""
+            },
+            {
+                id:10,
+                title:"Мелатонон",
+                img:"/melatonin.jpg",
+                category:"supplements",
+                price:"370",
+                description:""
+            },
+            {
+                id:11,
+                title:"Семейные",
+                img:"/multi_az.jpg",
+                category:"complex",
+                price:"520",
+                description:""
+            },
+            {
+                id:12,
+                title:"Омега 3",
+                img:"/omega3_60t.jpg",
+                category:"supplements",
+                price:"550",
+                description:""
+            },
+            {
+                id:13,
+                title:"Кофермент 10",
+                img:"/q10.jpg",
+                category:"supplements",
+                price:"460",
+                description:""
+            },
+            {
+                id:14,
+                title:"Антистрессовые",
+                img:"/stress_moment.jpg",
+                category:"supplements",
+                price:"390",
+                description:""
+            },
+            {
+                id:15,
+                title:"Витамин С 1000мг",
+                img:"/vit1000.jpg",
+                category:"singular",
+                price:"600",
+                description:""
+            },
+            {
+                id:16,
+                title:"Цинк",
+                img:"/zink.jpg",
+                category:"singular",
+                price:"300",
+                description:""
+            },
+        ]))
+    },[]);
+    const [currentItems,setCurrentItems] = useState<TypeItem[]>(selector.items);
     const changeShowItem=(item:TypeItem)=>{
         setFullItem(item);        
         setShowItem(false);
@@ -166,16 +175,16 @@ export const Main=()=>{
     const setShowItemTrue=()=>{
         setShowItem(true);
     }
-    useEffect(()=>{
-        setCurrentItems(items);
-        
-    },[]);
+    /*useEffect(()=>{
+        setCurrentItems((prevItems)=>selector);
+    },[selector]);*/
+
     const chooseCategory=(category:string)=>{
         if(category === "all"){
-            setCurrentItems(items);
+            setCurrentItems(selector.items);
             return;
         }
-        setCurrentItems(items.filter(elem => elem.category === category));
+        setCurrentItems(selector.items.filter(elem => elem.category === category));
     }
     const addToOrder=(item:TypeItem)=>{
      let isInArray = false;
