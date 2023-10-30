@@ -15,13 +15,12 @@ import { TypeItem } from "../../store/reducers/types";
 export const Main=()=>{
     const dispatch = useDispatch();
     const selector = useSelector( (state:RootState) => state.items );
-    console.log(selector);
 
     const orderContext = useOrders() as OrdersContextType;
     const { orders, setOrders } = orderContext;
     let [showItem, setShowItem] = useState(true);
     let [fullItem, setFullItem] = useState<TypeItem | null>(null);
-
+    const [currentItems,setCurrentItems] = useState<TypeItem[]>(selector.items);
     useEffect(()=>{ 
       dispatch(setItems([        
             {
@@ -160,7 +159,9 @@ export const Main=()=>{
             },
         ]))
     },[]);
-    const [currentItems,setCurrentItems] = useState<TypeItem[]>(selector.items);
+    useEffect(()=>{
+        setCurrentItems(selector.items)
+    },[selector])
     const changeShowItem=(item:TypeItem)=>{
         setFullItem(item);        
         setShowItem(false);

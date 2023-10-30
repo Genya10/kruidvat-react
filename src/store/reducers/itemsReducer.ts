@@ -4,7 +4,6 @@ const initialState: MainState={
     items:[]            
 }
 
-
 export const itemsReducer = (state = initialState,action:MainAction)=>{
   switch(action.type){
     case ActionEnum.SET_ITEMS:
