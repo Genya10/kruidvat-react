@@ -1,4 +1,4 @@
-import { TypeItem } from "./Main";
+import { TypeItem } from "../../store/reducers/types"
 
 type PropsTypeShowItem={
     elem:TypeItem,

@@ -6,18 +6,11 @@ import { Categories } from "./Categories";
 import { useOrders,OrdersContextType } from "../Context/OrderProvider";
 import { ShowItem } from "./ShowItem";
 import { useDispatch } from "react-redux/es/exports";
-import { setItems } from "../../store/reducers/itemsReducer";
+import { setItems } from "../../store/reducers/types";
 import { useSelector, UseSelector } from "react-redux/es/hooks/useSelector";
 import { RootState } from "../../store/store";
+import { TypeItem } from "../../store/reducers/types";
 
-export type TypeItem = {
-    id: number,
-    title: string,
-    img: string,
-    category: string,
-    price: string,
-    description:string
-}
 
 export const Main=()=>{
     const dispatch = useDispatch();
@@ -25,9 +18,9 @@ export const Main=()=>{
     console.log(selector);
 
     const orderContext = useOrders() as OrdersContextType;
-    const {orders,setOrders}=orderContext;
-    let [showItem,setShowItem]=useState(true);
-    let [fullItem,setFullItem]=useState<TypeItem | null>(null);
+    const { orders, setOrders } = orderContext;
+    let [showItem, setShowItem] = useState(true);
+    let [fullItem, setFullItem] = useState<TypeItem | null>(null);
 
     useEffect(()=>{ 
       dispatch(setItems([        
@@ -175,9 +168,6 @@ export const Main=()=>{
     const setShowItemTrue=()=>{
         setShowItem(true);
     }
-    /*useEffect(()=>{
-        setCurrentItems((prevItems)=>selector);
-    },[selector]);*/
 
     const chooseCategory=(category:string)=>{
         if(category === "all"){

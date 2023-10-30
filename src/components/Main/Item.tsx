@@ -1,6 +1,6 @@
 import { useState } from "react";
 import cl from "../../styles/Item.module.css";
-import { TypeItem } from "./Main";
+import { TypeItem } from "../../store/reducers/types";
 
 type PropsTypeItem={
     item:TypeItem,
