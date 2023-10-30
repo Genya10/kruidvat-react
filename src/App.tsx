@@ -15,7 +15,7 @@ function App() {
           <Header />
           <Sidebar />
           <Main/>
-          <Footer/>
+          <RoutesComponent/>
         </div>
       </OrderProvider>
     </BrowserRouter>
