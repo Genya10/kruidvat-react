@@ -3,9 +3,9 @@
  grid-area: sidebar;
  background-color: azure;
  padding-left: 2rem;
+ padding-right: 5rem;
 }
-.contacts {
-    margin-right: 5rem;
+.contacts {    
     padding: 1.85rem;
   }
 .linkInfo {
@@ -25,7 +25,6 @@
   .infoLi:hover,
   .infoLi:focus {
     font-weight: 600;
-    font-size: 1.2rem;
     transition: 500ms ease;
   }
 
