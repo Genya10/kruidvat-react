@@ -4,7 +4,6 @@ import { useState,useEffect } from "react";
 import { Item } from "./Item";
 import { Categories } from "./Categories";
 import { useOrders,OrdersContextType } from "../Context/OrderProvider";
-import { ShowItem } from "./ShowItem";
 import { useDispatch } from "react-redux/es/exports";
 import { setItems } from "../../store/reducers/types";
 import { useSelector, UseSelector } from "react-redux/es/hooks/useSelector";

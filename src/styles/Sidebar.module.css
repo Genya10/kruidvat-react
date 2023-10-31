@@ -1,9 +1,8 @@
+
 .sidebar{
-    width: 25%;
-    background-color: azure;
-    position: absolute;
-    top: 9rem;
-    left: 0;
+ grid-area: sidebar;
+ background-color: azure;
+ padding-left: 2rem;
 }
 .contacts {
     margin-right: 5rem;

@@ -1,11 +1,8 @@
+
 .footer{
-    height: 14rem;
-    background-color:rgba(128, 128, 128, 0.579);
-    position: absolute;
-    top: 192rem;
-    width: 100%;
-    font-size: 1.5rem;
+    grid-area: footer;
+    background-color:rgba(128, 128, 128, 0.579);    font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }

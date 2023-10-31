@@ -1,10 +1,12 @@
+
 .header{
-    padding: 1.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #75757525;
-    position: relative;
+  grid-area: header;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #75757525;
+  position: relative;
 }
 
 .logo {
