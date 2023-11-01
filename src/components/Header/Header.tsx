@@ -30,6 +30,9 @@ const deleteOrder=(id:number)=>{
 const setModalTrue=()=>{
   setModal(true);
 }
+const closeModal=()=>{
+  setModal(false)
+}
 
     return (
       <div className={cl.header}>
@@ -44,7 +47,7 @@ const setModalTrue=()=>{
            className={`${cl.shopButton} ${cartOpen && cl.active}`}
            />
            {modal && 
-           <AuthFormModal />}
+           <AuthFormModal closeModal={closeModal}/>}
             
           {cartOpen && (
             <div className={cl.shopCart}>

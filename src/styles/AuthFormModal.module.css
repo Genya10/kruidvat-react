@@ -10,12 +10,23 @@
     align-items: center;
     z-index: 20;
 }
+.myModal::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10;
+    pointer-events: auto;
+}
 
 .myModalContent{
     padding: 3rem;
     background: white;
     border-radius: 1rem;
-    width: 25rem;
+    width: 25rem;    
+
 }
 input{
     display: block;
