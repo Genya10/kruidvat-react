@@ -8,14 +8,17 @@ export const Sidebar=()=>{
 
     let [popup,setPopup]=useState(false);
     const showPopup=()=>{
-        setPopup(popup = !popup);
+      setPopup(true);
     }
-
+    const closedPopup=()=>{
+      setPopup(false);
+    }
+    
     return (
       <div className={cl.sidebar}>
         <ContactsSidebar />
         <HitSale showPopup={showPopup} />
-        {popup && <ModalSidebar showPopup={showPopup} />}        
+        {popup && <ModalSidebar closedPopup={closedPopup} popup={popup}/>}        
       </div>
     );
 }

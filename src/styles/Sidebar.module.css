@@ -27,7 +27,7 @@
     font-weight: 600;
     transition: 500ms ease;
   }
-
+/*Hit sale*/
 .hit {
     font-weight: 700;
     font-size: 1.55rem;
@@ -53,13 +53,21 @@
     transform: scale(-1, 1);
     transition-duration: 1.5s;
   }
-
+/*Popup*/
 .popup {
   width: 18rem;
   border-radius: 0.8rem;
   background-color: rgba(0, 128, 0, 0.46);
   padding: 0.6rem;
   margin-left: 0.5rem;
+  transform: translateX(-20rem);
+  opacity: 0;
+  transition:all 1.2s ease;
+}
+.active{
+  transform: translateX(0rem);
+  transition:all 1.2s ease;
+  opacity: 1;
 }
 
 .popupClose {
