@@ -5,8 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #75757525;
-  position: relative;
+  background-color: gainsboro;
+  position: fixed;
+  z-index: 40;
+  padding-right: 1.65rem;
 }
 
 .logo {
