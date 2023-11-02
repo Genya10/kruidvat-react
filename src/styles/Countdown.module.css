@@ -1,0 +1,25 @@
+.wrapper{
+    margin-bottom: 2rem;
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.titleCountdown{
+    text-align: center;
+    margin-bottom: 0;
+    
+}
+.item{
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+    color: crimson;
+}
+.small{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: blue;
+    line-height: 1;
+}

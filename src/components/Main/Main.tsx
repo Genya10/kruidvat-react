@@ -421,6 +421,7 @@ export const Main=()=>{
 
     return(       
         <div className={cl.main}>
+            <Countdown/>
               {showItem 
        ? <div>
             <Categories chooseCategory={chooseCategory}/>
