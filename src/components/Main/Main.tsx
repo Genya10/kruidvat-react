@@ -9,7 +9,7 @@ import { setItems } from "../../store/reducers/types";
 import { useSelector, UseSelector } from "react-redux/es/hooks/useSelector";
 import { RootState } from "../../store/store";
 import { TypeItem } from "../../store/reducers/types";
-
+import { Countdown } from "./Countdown";
 
 export const Main=()=>{
     const dispatch = useDispatch();
