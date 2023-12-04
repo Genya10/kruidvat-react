@@ -11,6 +11,9 @@
     margin-bottom: 0;
     
 }
+.titleCountdown span{
+    margin-right: 0.5rem;
+}
 .item{
     font-weight: 700;
     font-size: 1.4rem;

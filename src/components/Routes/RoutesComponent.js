@@ -1,5 +1,4 @@
 import {Routes, Route,Navigate } from "react-router-dom";
-import { Main } from "../Main/Main";
 import { Footer } from "../Footer/Footer";
 import { Vitamin1 } from "../Footer/Items/vitamin1";
 import { Vitamin2 } from "../Footer/Items/vitamin2";
@@ -7,10 +6,11 @@ import { Vitamin3 } from "../Footer/Items/vitamin3";
 import { Vitamin4 } from "../Footer/Items/vitamin4";
 import { Vitamin5 } from "../Footer/Items/vitamin5";
 import { Vitamin6 } from "../Footer/Items/vitamin6";
+import cl from "../../styles/RoutesComponent.module.css";
 
 export const RoutesComponent=()=>{
     return(
-        <div>
+        <div className={cl.footer}>
           <Footer/>
           <Routes>
             <Route path="/vitamin1*" element={<Vitamin1/>}/>

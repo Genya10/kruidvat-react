@@ -17,15 +17,17 @@ export const Countdown=()=>{
              updateSeconds();
             },[]);
        
-         const [daysLeft,setDays] = useState(Math.floor(different /1000/60/60/24));
+        const [daysLeft,setDays] = useState(Math.floor(different /1000/60/60/24));
         const [hoursLeft,setHours] = useState(Math.floor(different /1000/60/60) % 24);
         const [minutesLeft,setMinutes] = useState(Math.floor(different /1000/60) %60 );
-        const [secondsLeft,setSeconds] = useState(Math.floor(different  / 1000) %60);
+        //const [secondsLeft,setSeconds] = useState(Math.floor(different  / 1000) %60);
 
     return (
       <div className={cl.wrapper}>
-        <h2 className={cl.titleCountdown}>До окончания акции осталось:</h2>
-        <FaGift/>
+
+        <h2 className={cl.titleCountdown}><span><FaGift /></span>До окончания акции осталось:
+        </h2>
+        
         <div className={cl.counter}>
           <div>
             <div className={cl.item}>{daysLeft < 10 ? "0"+ daysLeft : daysLeft}</div>
@@ -40,11 +42,11 @@ export const Countdown=()=>{
             </div>
             <small className={cl.small}>минут</small>
           </div>
-          <div>
-            <div className={cl.item}>{secondsLeft < 10 ? "0"+ secondsLeft : secondsLeft}
-           </div>
+           {/*<div>
+           <div className={cl.item}>{secondsLeft < 10 ? "0"+ secondsLeft : secondsLeft}
+       </div>
             <small className={cl.small}>секунд</small>
-          </div>
+          </div>*/}
         </div>
       </div>
     );

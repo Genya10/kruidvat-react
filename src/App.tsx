@@ -5,7 +5,8 @@ import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
 import { OrderProvider } from './components/Context/OrderProvider';
 import { BrowserRouter , Route } from "react-router-dom";
-import { RoutesComponent } from './components/Routes/RoutesComponent';
+//import { RoutesComponent } from './components/Routes/RoutesComponent';
+
 
 function App() {
   return (
