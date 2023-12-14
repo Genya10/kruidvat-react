@@ -1,6 +1,7 @@
 
 .header{
   grid-area: header;
+  width: 90rem;
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -16,7 +17,7 @@
     height: 6rem;
     background-color: red;
     border-radius:3.125rem;
-    border: 2px solid gray;
+    border: 0.125rem solid gray;
     color: #ffffff;
     font-weight: 700;
     font-size: 1.6rem;
@@ -29,7 +30,7 @@
   .textHeader {
     font-family: 'Roboto';
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.2;
     text-transform: uppercase;
     text-shadow: 0.125rem 0.125rem rgba(128, 128, 128, 0.5);
@@ -37,7 +38,7 @@
   }
   
   .textHeader:hover {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-shadow: 0.2rem 0.2rem rgba(128, 128, 128, 0.5);
     transition-duration: 1s;
   }
@@ -78,9 +79,10 @@
     color: brown;
     text-align: start;
     margin-top: -1.5rem;
-    margin-left: 1rem;
+    margin-right: 2.5rem;
     cursor: pointer;
   }
+
   .total{
     font-weight: 700;
     font-size: 1.25rem;
@@ -98,4 +100,43 @@
   }
   .makeOrder:hover{
     transform: scale(1.2,1.2);   
+  }
+
+  @media(max-width:1025px){
+    .header{
+      width: 64rem;
+      display: flex;
+      flex-direction: column;
+      padding: 0.2rem 1.3rem;
+    }
+    .logo {
+      width: 14rem;
+      height: 4rem;
+      background-color: red;      border-radius:3rem;
+      border: 0.1rem solid gray;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-left: 2.5rem;
+    }
+    .cabinet{
+      margin-top: 0.1rem;
+    }
+    .shopCart{
+      top: 10rem;
+    }
+    .shopButton{
+      top: 8rem;
+      right: 13rem;
+    }
+  }
+  @media(max-width:768px){
+    .header{
+      width: 48rem;
+    }
+    .shopButton{
+      right: 10rem;
+    }
   }

@@ -1,9 +1,10 @@
-
+html{
+  font-size: 16px;
+}
 body{
   margin: 0;
   padding: 0;
   width: 100%;
-  font-size: 16px;
 }
 
 .App{
@@ -18,3 +19,21 @@ body{
    grid-template-rows: 9.5rem 1fr 15rem;
 }
 
+@media (max-width:1024px){
+  html{
+    font-size: 14px;
+  }
+  .App{
+    width: 64rem;
+    margin: auto;
+  }
+}
+@media(max-width:768px){
+  html{
+    font-size: 12px;
+  }
+  .App{
+    width: 48rem;
+    margin: auto;
+  }
+}
