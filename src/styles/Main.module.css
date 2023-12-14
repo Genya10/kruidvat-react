@@ -29,7 +29,7 @@
     font-weight: 700;
     font-size: 1.8rem;
     color: purple;
-    margin-left: 10rem;
+    margin-left: 8rem;
     margin-top: 1.5rem;
 }
 
@@ -49,7 +49,7 @@
     border-radius: 1.2rem;
     border: 0.0625rem solid white;
     box-shadow: none;
-    margin-left: 6.5rem;
+    margin-left: 5rem;
     margin-top: 2rem;
     transition: transform 1s;
 }
@@ -64,7 +64,19 @@
     }
 }
 @media(max-width:1024px){
-
+.fullItem{
+    flex-direction: column;
+}
+.fullItem img{
+    width: 50%;
+    margin-left: 8rem;
+}
+.fullItem b{
+    margin-left: 13rem;
+}
+.btnReturn{
+    margin-left: 10rem;
+}
 }
 
 @media(max-width:888px){
@@ -73,4 +85,10 @@
         flex-direction: column;
         align-items: center
     };
+}
+
+@media(max-width:768px){
+    .fullItem img{
+        margin-left: 2rem;
+    }
 }
