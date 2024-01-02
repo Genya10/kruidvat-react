@@ -5,7 +5,7 @@ import { FaGift } from "react-icons/fa";
 export const Countdown=()=>{   
 
     const currentYear = new Date().getFullYear();
-    const nextYear = new Date(`February 01 ${currentYear+1} 00:00:00`);
+    const nextYear = new Date(`March 01 ${currentYear} 00:00:00`);
            
         const [currentTime,setCurrentTime] = useState<Date>(new Date());
         const different = nextYear.getTime() - currentTime.getTime();
